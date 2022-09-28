@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: study-pod
+  labels:
+    type: study
+spec:
+  containers:
+    - name: study-container
+      image: httpd
+      ports:
+      - containerPort: 80
+
