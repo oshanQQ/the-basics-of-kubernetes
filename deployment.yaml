@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: study-deployment
+spec:
+  selector:
+    matchLabels:
+      type: study
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        type: study
+    spec:
+      containers:
+      - name: study-containers
+        image: httpd
+        ports:
+        - containerPort: 80
+
